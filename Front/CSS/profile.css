@@ -1,0 +1,127 @@
+/* ////////////////////////////////////////////////// [ Header ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+header {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background: goldenrod;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* ////////////////////////////////////////////////// [ Profile ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: darkgoldenrod;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileImg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: ivory;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.profileImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.profile .profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.profileInfo .name {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.profileInfo .mail {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ////////////////////////////////////////////////// [ User Cards ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.userCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 5%;
+}
+
+.userCard {
+    border-radius: 25px;
+    width: 350px;
+    margin-top: 50px;
+    animation:
+    visible 1s
+    forwards; 
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px 20px;
+    background: gray;
+    border-radius: 25px 25px 0 0;
+}
+
+.text {
+    padding: 10px;
+}
+
+.text .house h3 {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.favorite {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.house {
+    color: whitesmoke;
+}
+
+.characterImage {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+}
+
+.characterImage img {
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ [ Keyframes ] _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+@keyframes visible {
+    0% {opacity: 0; display: block;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
+}

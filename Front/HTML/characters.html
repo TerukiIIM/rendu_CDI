@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- TITLE -->
+        <title>Characters | Harry Potter</title>
+
+        <!-- LOGO -->
+        <link rel="icon" type="image/x-icon" href="../IMG/LogoHP.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/characters.css">
+        
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Protest+Revolution&display=swap" rel="stylesheet">
+
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <!-- MAIN PAGE -->
+    <body>
+        <!-- HEADER -->
+        <header class="headerBG">
+            <!-- NAVBAR -->
+            <nav>
+                <a href="#" class="logo"><img src="../IMG/HarryPotter.png" alt=""></a>
+
+                <div class="navLinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="characters.html">Characters</a></li>
+                        <li><a href="booster.html">Boosters</a></li> 
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="icons">
+                    <i class="darkMode fa fa-sun" onclick="changeModeIcon(this)"></i>
+                    
+                    <i class="log ri-user-fill"></i>
+
+                    <i class="menu fa fa-bars" onclick="changeMenuIcon(this)"></i>
+                </div>
+            </nav>
+
+            <!-- TITLE -->
+            <div class="textBox">
+                <h1>Characters</h1>
+            </div>
+        </header>
+        
+        <section class="container">
+            <form action="#">
+                <i class="fa fa-search"></i>
+                <input type="text" name="searchItem" id="searchItem" placeholder="Search" onkeyup="search()" autocomplete="off">
+            </form>
+
+            <div class="filterList">
+                <ul>
+                    <li class="filter active" id="all">All</li>
+                    <li class="filter" id="Gryffindor">Gryffindor</li>
+                    <li class="filter" id="Slytherin">Slytherin</li>
+                    <li class="filter" id="Hufflepuff">Hufflepuff</li>
+                    <li class="filter" id="Ravenclaw">Ravenclaw</li>
+                    <li class="filter" id="Other">Other</li>
+                </ul>
+            </div>
+
+            <div class="charactersList" id="charactersList">
+                <div class="characters">
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- MODAL -->
+        <div class="modalContainer">
+            <div class="overlay modalTrigger"></div>
+            <div class="modal">
+                <button class="closeModal modalTrigger">X</button>
+                <form action="#" class="echange">
+                    <div class="chooses">
+                        <div class="chooseUser">
+                            <label for="users">Utilisateur :</label>
+                            <select name="user" id="users">
+                                <option value="">--Please choose an user--</option>
+                            </select>
+                        </div>
+                        
+                        <div class="chooseCard">
+                            <label for="cards">Carte :</label>
+                            <select name="card" id="cards">
+                                <option value="">--Please choose a card--</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit">Echange</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="socialIcons">
+                <a href="#"><i class="ri-discord-fill"></i></a>
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+            </div>
+        </footer>
+    
+        <button class="modalBtn modalTrigger"><i class="fa fa-right-left"></i></button>
+        <!-- Le bonton permet de faire appel à la fonction "topFunction" -->
+        <button onclick="topFunction()" class="scrollToTopBtn" title="Scroll To Top">▲</button>
+    
+        <script src="../JS/script.js"></script>
+        <script src="../JS/characters.js"></script>
+    </body>
+</html>

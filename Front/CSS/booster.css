@@ -1,0 +1,48 @@
+/* ////////////////////////////////////////////////// [ Booster ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.booster {
+    text-align: center;
+    padding-top: 90px;
+}
+
+.card, .openBooster {
+    margin: auto;
+    height: 500px;
+    width: 450px;
+    border-radius: 25px;
+}
+
+/* -------------------------------------------------- [ Can Open Booster ? ] -------------------------------------------------- */
+
+.openBooster {
+    background: goldenrod;
+    margin: auto;
+}
+
+.canOpenBooster {
+	display: grid;
+    font-size: 50px;
+    height: 100%;
+    align-items: center;
+}
+
+/* -------------------------------------------------- [ Cards ] -------------------------------------------------- */
+.card {
+    display: none;
+}
+
+.card h2 {
+    padding: 20px 0;
+    color: white;
+    font-size: 50px;
+}
+
+.card img {
+    width: 350px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.hidden {
+    display: none;
+}

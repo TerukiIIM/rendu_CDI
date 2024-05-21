@@ -1,0 +1,99 @@
+/* ////////////////////////////////////////////////// [ Sections ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+section {
+	padding: 0 5%;
+}
+
+section h2 {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 600;
+    padding: 50px 0 20px;
+}
+
+/* -------------------------------------------------- [ Summary ] -------------------------------------------------- */
+.summaryList {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding: 75px 0; 
+}
+
+.summary {
+	margin: 5%;
+	padding: 20px ; 
+}
+
+.summary ul li{
+	list-style: none;
+	padding: 10px 10px;
+	position: relative;
+	text-decoration: none;
+    font-size: 25px;
+}
+
+.summary ul li a {
+	color: black;
+}
+
+.summary ul li a:hover {
+	color: goldenrod;
+    transition: all 0.2s;
+}
+
+/* -------------------------------------------------- [ Content ] -------------------------------------------------- */
+.content  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.content img {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content .text {
+    width: 90%;
+	color: black;
+    background: #fcedab;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.content .text h3, .content .text p {
+    font-family: 'Playfair Display', serif;
+}
+
+.content .text:hover {
+	box-shadow:  0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 900px) {
+	.content {
+		grid-template-columns: 1fr;
+	}
+
+    .content img {
+        width: 75%;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .content .text {
+        width: 75%;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+
+/* ////////////////////////////////////////////////// [ Others ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* -------------------------------------------------- [ Darkmode ] -------------------------------------------------- */
+.darkMode .content .text:hover {
+	box-shadow:  0 10px 10px rgba(218, 165, 32, 0.3);
+}

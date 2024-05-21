@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Protest+Revolution&display=swap');
+
+/* ////////////////////////////////////////////////// [ General ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* Parametre par defaut pour le CSS */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Protest Revolution', sans-serif;
+}
+
+/* -------------------------------------------------- [ scrollBar ] -------------------------------------------------- */
+/* Cette ligne permet de faire disparaitre la scrollbar de l'écran */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ////////////////////////////////////////////////// [ Header ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+header {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+.headerBG {
+    background-image: url(../IMG/LightMode.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.textBox {
+    height: 100vh;
+	display: grid;
+	align-items: center;
+}
+
+.textBox h1 {
+    text-align: center;
+	font-size: 90px;
+}
+
+@media screen and (max-width: 900px) {
+    .textBox h1 {
+        font-size: 80px;
+    }
+}
+
+
+/* ////////////////////////////////////////////////// [ Navbar ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+    z-index: -1;
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+nav:hover::after {
+    left: 100%;
+}
+
+/* -------------------------------------------------- [ Logo ] -------------------------------------------------- */
+.logo img {
+    position: absolute;
+    width: 150px;
+	top: 0;
+}
+
+/* -------------------------------------------------- [ Nav Links ] -------------------------------------------------- */
+nav a {
+    color: goldenrod;
+    font-size: 18px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 25px;
+}
+
+nav ul li a:hover {
+	color: gold;
+	transition: 0.5s;
+}
+
+nav ul li.active a {
+	color: goldenrod;
+	font-weight: 800;
+}
+
+/* -------------------------------------------------- [ Icons ] -------------------------------------------------- */
+.icons {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icons i {
+    color: white;
+    padding: 10px;
+}
+
+.icons .menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        padding: 0;
+    }
+
+    .logo img  {
+        position: absolute;
+        left: 5%;
+    }
+
+    .navLinks {
+        top: 0;
+        left: 0 ;
+        position: absolute;
+        background-color: rgba(5,10,30,0.7);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    
+    .navLinks ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navLinks ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+    
+    .icons {
+        padding: 32px 11%;
+    }
+
+    .icons .menu {
+        position: absolute;
+        display: inline-flex;
+    }
+
+    .mobileMenu {
+        margin-left: 0;
+    }
+}
+
+
+/* ////////////////////////////////////////////////// [ Join ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.join {
+	margin: 100px auto;
+	width: 80%;
+	background-image: url(https://i.pinimg.com/originals/42/15/16/4215160cd86906dd063387dd26937f21.gif);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.join  h2 {
+	color: white;
+	margin-bottom: 40px;
+	padding: 0;
+}
+
+.heroBtn {
+	display: inline-block;
+	color: white;
+	border: 1px solid white;
+	padding: 15px 30px;
+	font-size: 15px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+
+.heroBtn:hover {
+	background: goldenrod;
+	transition: 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+	.join  h2 {
+		font-size: 25px
+	}
+}
+
+
+/* ////////////////////////////////////////////////// [ Footer ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+footer {
+	background-color: black;
+	width: 100%;
+	padding: 70px 30px 20px;
+}
+
+.credit {
+	letter-spacing: 1px;
+	color: white;
+	text-align: center;
+}
+
+.socialIcons {
+	display: flex;
+	justify-content: center;
+}
+
+.socialIcons a {
+	padding: 10px;
+	background-color: white;
+	margin: 10px;
+	border-radius: 50%;
+}
+
+.socialIcons a i {
+	font-size: 2em;
+	color: black;
+	opacity: 0.9;
+}
+
+.socialIcons a:hover {
+	background-color: #111;
+	transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+	color: white;
+	transition: 0.5s;
+}
+
+
+/* ////////////////////////////////////////////////// [ Others ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* -------------------------------------------------- [ Darkmode ] -------------------------------------------------- */
+.darkMode {
+	color: white;
+}
+
+.darkMode .headerBG {
+	background-image: url(../IMG/DarkMode.png);
+}
+
+.darkMode .summary ul li a {
+	color: gold;
+}
+
+/* -------------------------------------------------- [ Buttons ] -------------------------------------------------- */
+button {
+    cursor: pointer;
+	transition: all 0.3s ease 0s;
+    background: goldenrod;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------------- [ ModalBtn + ScrollToTopBtn ] -------------------------------------------------- */
+.modalBtn, .scrollToTopBtn {
+    position: fixed;
+	bottom: 20px;
+	color: white;
+    background-color: goldenrod;
+	padding: 20px;
+    border: none;
+	border-radius: 25px;
+	font-size: 20px;
+	z-index: 100;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+}
+
+.modalBtn {
+    left: 20px;
+}
+
+.scrollToTopBtn {
+    display: none;
+	right: 20px;
+}
+
+.modalBtn:hover, .scrollToTopBtn:hover {
+	background-color: gold;
+}
+
+/* -------------------------------------------------- [ Modal ] -------------------------------------------------- */
+.modalContainer {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.modalContainer.active {
+    transition: visibility 0s;
+    visibility: visible;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modalContainer.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal {
+    opacity: 0;
+    width: 95%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50%));
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modalContainer.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+
+.closeModal {
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.chooses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 30px;
+}
+
+.chooses .chooseUser label, .chooses .chooseCard label {
+    font-size: 30px;
+    color: black;
+}
+
+.submit {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, gold, goldenrod, gold );
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.4em;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+}
+
+@media screen and (max-width: 900px) {
+    .chooses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

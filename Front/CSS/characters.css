@@ -1,0 +1,164 @@
+/* ////////////////////////////////////////////////// [ Cards Container ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.container {
+    padding: 100px;
+}
+
+/* -------------------------------------------------- [ Search Bar ] -------------------------------------------------- */
+.container form {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container form i {
+    padding-left: 10px;
+    margin: auto;
+    width: 35px;
+}
+
+.container form input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 10px;
+}
+
+/* -------------------------------------------------- [ Filter ] -------------------------------------------------- */
+.filterList {
+    padding-top: 20px;
+}
+
+.filterList ul {
+    display: flex;
+    gap: 25px;
+}
+
+.filterList ul li {
+    color: white;
+    background-color: goldenrod;
+    padding: 10px 13px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.filterList li.active {
+    background-color: gold;
+}
+
+/* -------------------------------------------------- [ Characters ] -------------------------------------------------- */
+.characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 5%;
+    justify-items: center;
+}
+
+.character {
+    border-radius: 25px;
+    width: 350px;
+    margin-top: 50px;
+    animation:
+    visible 1s
+    forwards; 
+}
+
+.character.hidden {
+    animation: 
+    hidden 0.25s
+    forwards;
+}
+
+/* -------------------------------------------------- [ Description ] -------------------------------------------------- */
+.description {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px 20px;
+    background: gray;
+    border-radius: 25px 25px 0 0;
+}
+
+.text {
+    padding: 10px;
+}
+
+.text .house h3 {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.favorite {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.house {
+    color: whitesmoke;
+}
+
+/* -------------------------------------------------- [ Image ] -------------------------------------------------- */
+.characterImage {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+}
+
+.characterImage img {
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1300px) {
+    .filterList ul {
+        flex-wrap: wrap;
+    }
+
+	.characters {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+    .characters img {
+        width: 100%;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+	.characters {
+		grid-template-columns: 1fr;
+	}
+
+    .characters img {
+        width: 75%;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ [ Keyframes ] _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+@keyframes visible {
+    0% {opacity: 0; display: block;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
+}
+
+@keyframes hidden {
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

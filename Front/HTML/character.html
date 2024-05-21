@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- TITLE -->
+        <title>Character | Harry Potter</title>
+
+        <!-- LOGO -->
+        <link rel="icon" type="image/x-icon" href="../IMG/LogoHP.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/character.css">
+        
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Protest+Revolution&display=swap" rel="stylesheet">
+
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <!-- MAIN PAGE -->
+    <body>
+        <!-- HEADER -->
+        <header>
+            <!-- NAVBAR -->
+            <nav>
+                <a href="#" class="logo"><img src="../IMG/HarryPotter.png" alt=""></a>
+
+                <div class="navLinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="characters.html">Characters</a></li>
+                        <li><a href="booster.html">Boosters</a></li> 
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="icons">
+                    <i class="darkMode fa fa-sun" onclick="changeModeIcon(this)"></i>
+                    
+                    <i class="log ri-user-fill"></i>
+
+                    <i class="menu fa fa-bars" onclick="changeMenuIcon(this)"></i>
+                </div>
+            </nav>
+
+            <div class="characterInfo">
+                <div class="info">
+                    <h2 id="characterName"></h2>
+                    
+                    <div class="generalInfo">
+                        <p id="characterBirthday"><b>Birthday : </b></p>
+                        <p id="characterBlood"><b>Blood : </b></p>
+                        <p id="characterEyes"><b>Eye Color : </b></p>
+                        <p id="characterHairs"><b>Hair Color : </b></p>
+                    </div>
+                    
+                    <div class="poudlardInfo">
+                        <p id="characterRole"><b>Role : </b></p>
+                        <p id="characterHouse"><b>House : </b></p>
+                        <p id="characterPatronus"><b>Patronus : </b></p>
+                        <p id="characterWand"><b>Wand : </b></p>
+                    </div>
+                    
+                    <div class="otherInfo">
+                        <p id="characterActor"><b>Actor : </b></p>
+                    </div>
+                </div>
+    
+                <div id="characterImg"></div>
+            </div>
+        </header>
+
+        <!-- MODAL -->
+        <div class="modalContainer">
+            <div class="overlay modalTrigger"></div>
+            <div class="modal">
+                <button class="closeModal modalTrigger">X</button>
+                <form action="#" class="echange">
+                    <div class="chooses">
+                        <div class="chooseUser">
+                            <label for="users">Utilisateur :</label>
+                            <select name="user" id="users">
+                                <option value="">--Please choose an user--</option>
+                            </select>
+                        </div>
+                        
+                        <div class="chooseCard">
+                            <label for="cards">Carte :</label>
+                            <select name="card" id="cards">
+                                <option value="">--Please choose a card--</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit">Echange</button>
+                </form>
+            </div>
+        </div>
+    
+        <button class="modalBtn modalTrigger"><i class="fa fa-right-left"></i></button>
+        <script src="../JS/script.js"></script>
+        <script src="../JS/character.js"></script>
+    </body>
+</html>

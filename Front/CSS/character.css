@@ -1,0 +1,36 @@
+/* ////////////////////////////////////////////////// [ Character Info ] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.characterInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15% 20%;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;    
+}
+
+.info {
+    text-align: left;
+    font-size: 25px;
+    background: goldenrod;
+    border-radius: 25px;
+    padding: 5%;
+}
+
+#characterImg img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .characterInfo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #characterImg img {
+        width: 95%;
+    }
+}
